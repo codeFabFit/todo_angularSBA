@@ -11,7 +11,7 @@ export class CrudService {
   serviceURL : string ;
 
   constructor(private http: HttpClient) { 
-    this.serviceURL = "http://localhost:4200/activities"
+    this.serviceURL = "http://localhost:4200/tasks"
   }
 
   addTask(task : Task) : Observable<Task> {

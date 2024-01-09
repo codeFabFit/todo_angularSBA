@@ -3,6 +3,7 @@
 // import { AppComponent } from "./app.component";
 // import { DashboardComponent } from "./component/dashboard/dashboard.component";
 // import {HttpClientModule} from '@angular/common/http'
+// import { CommonModule } from "@angular/common";
 
 // @new NgModel({
 //     declarations: [
@@ -11,6 +12,7 @@
 //     ],
 //     imports: [
 //         BrowserModule,
+//         CommonModule,
 //         FormsModule,
 //         HttpClientModule
 //     ],
