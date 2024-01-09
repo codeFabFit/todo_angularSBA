@@ -1,3 +1,5 @@
+
+
 <div class="container-fluid">
     <div class="container bg-dark-subtle">
 <h3>Get Things Done Box</h3>
@@ -11,7 +13,8 @@
 
             <div class="shadow">
             <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Add Task" name="task" [(ngModel)]="addTaskValue">
+                <input type="text" class="form-control" placeholder="Add Task" name="task" >
+                <!-- its suppose to be here but it wont work [(ngModel)]="addTaskValue"-->
                 <button class="btn btn-outline-success" type="button"(click)="addTask()" >Button</button>
               </div>
             </div>
@@ -19,14 +22,18 @@
             <h5 class="text-primary mt-4"> Activities : </h5>
 
             <div style="overflow-y: auto; height: 350px;">
-                <div class="m-3" *ngFor="let task of taskArr">
+                <!-- its suppose to be here but it wont work *ngFor="let task of taskArr -->
+                <div class="m-3" >
                     <div class="p-2 shadow border">
                             <div class="input-group row ps-3"></div> 
                             <!-- using ngFor to call the task and have print here -->
                             <div class="card col-md-10 border-0" {{ task.task_name }} ></div>
                             <!-- add animation to make it look fun -->
-                            <button class="btn btn-outline-primary col me-2" data-bs-toggle="model" type="button" (click)="call(task)">edit</button>
-                            <button class="btn btn-outline-danger col" (click)="deleteTask(task)">delete</button>
+                            <button class="btn btn-outline-primary col me-2" data-bs-toggle="model" type="button" >edit</button>
+                            <!--  deteleTask() is suppose to work here for click event  (click)="call() -->
+
+                            <button class="btn btn-outline-danger col">delete</button>
+                            <!--  deteleTask() is suppose to work here for click event  (click)="deleteTask() -->
 
                     </div>
                             
@@ -40,7 +47,8 @@
                                     </div>
                                     <div class="modal-body">
                                         <div class="input-group mb-3">
-                                            <input type="text" class="form-control" placeholder="Add Task" name="task" [(ngModel)]="editTaskValue">
+                                            <input type="text" class="form-control" placeholder="Add Task" name="task">
+                                            <!-- wont let me bind because its not apart of input?  [(ngModel)]="editTaskValue" -->
                                             <button class="btn btn-outline-success" type="button"(click)="editTask()" data-bs-dismiss="modal" >update</button>
                                           </div>
                                     </div>
